@@ -1,5 +1,12 @@
 # 应用法学论文写作专家团·总览
 
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Platform](https://img.shields.io/badge/Platform-WorkBuddy%20%7C%20Claude%20Code%20%7C%20Codex-green)
+![Skills](https://img.shields.io/badge/Skills-9-orange)
+![Pipeline](https://img.shields.io/badge/Pipeline-8%E7%8E%AF%E8%8A%82-red)
+![Language](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-lightgrey)
+![Discipline](https://img.shields.io/badge/Discipline-%E5%BA%94%E7%94%A8%E6%B3%95%E5%AD%A6-purple)
+
 ## ⚠️ 学术伦理声明
 
 **本专家团是研究辅助工具，不替代作者。** 使用前请务必阅读 [学术伦理声明.md](学术伦理声明.md)。
