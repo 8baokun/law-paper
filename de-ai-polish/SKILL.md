@@ -24,7 +24,7 @@ description: >-
 - 用户要求检测/去除文章中的AI腔、AI味道、AI痕迹
 - 论文初稿完成后进入文风处理环节（生产线环节7）
 - 用户要求润色、优化文本表达
-- 上游环节（argument-evaluation-patch或academic-writing-patch）输出后需要文风处理
+- 上游环节（paper-argument-evaluator或paper-writing-engine）输出后需要文风处理
 
 ## 双重体系
 
