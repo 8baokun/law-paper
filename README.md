@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Platform](https://img.shields.io/badge/Platform-WorkBuddy%20%7C%20Claude%20Code%20%7C%20Codex-green)
-![Skills](https://img.shields.io/badge/Skills-9-orange)
+![Skills](https://img.shields.io/badge/Skills-11-orange)
 ![Pipeline](https://img.shields.io/badge/Pipeline-8%E7%8E%AF%E8%8A%82-red)
 ![Language](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-lightgrey)
 ![Discipline](https://img.shields.io/badge/Discipline-%E5%BA%94%E7%94%A8%E6%B3%95%E5%AD%A6-purple)
@@ -40,18 +40,22 @@
 
 ## 架构
 
-本专家团由9个独立技能组成，覆盖法学论文写作完整生产线的七个环节+元认知层+实务审查层。
+本专家团由11个独立技能组成，覆盖法学论文写作完整生产线的七个环节+元认知层+实务审查层+总入口+终稿总检。
 
 ### 论文生产线七环节模型
 
 ```
+                    paper-writing-orchestrator（总入口·轻量路由器）
+                            ↓ 路由到各环节
 环节1：选题检查        → paper-topic-validator
-环节2：思路梳理        → paper-idea-architect
+环节2：思路梳理        → paper-idea-architect（含方法选择路由）
 环节3：提纲审查        → paper-outline-reviewer
 环节4：查资料          → paper-literature-coordinator
 环节5：专门写          → paper-writing-engine
 环节6：写后核验        → paper-argument-evaluator
 环节7：文风处理        → de-ai-polish
+                            ↓
+                    paper-final-checklist（终稿总检清单）
 ```
 
 ### 实务审查层（可选）
@@ -73,17 +77,19 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 
 | 序号 | 技能名                          | 环节    | 类型        | 文件数 | 说明                     |
 | -- | ---------------------------- | ----- | --------- | --- | ---------------------- |
-| 1  | paper-topic-validator        | 环节1  | 新建        | 4   | 五维选题评估+选题验证型文献综述+可选实务溯源模块A       |
-| 2  | paper-idea-architect         | 环节2  | 新建        | 2   | 思路梳理，产出标准化论证框架文档       |
-| 3  | paper-outline-reviewer       | 环节3  | 新建        | 3   | 八项提纲审查，数据接口对齐          |
-| 4  | paper-literature-coordinator | 环节4  | 新建        | 2   | 四类文献检索协调，产出文献清单+阅读笔记+引注预检   |
-| 5  | paper-writing-engine         | 环节5  | 新建        | 3   | 法学论文写作引擎，六种结构模式+法学论证方法+引注规范 |
-| 6  | paper-argument-evaluator     | 环节6  | 新建        | 2   | 六维/七维论证强度评估，投稿场景适配+可选模块B   |
-| 7  | de-ai-polish                 | 环节7  | 改造自lawbox | 4   | 去AI腔，8大类18条检测规则，含学术自我指涉与标签式概括 |
-| 8  | systems-thinking             | 元认知   | 新建        | 5   | 六维框架元认知工具，含法学应用模式      |
-| 9  | legal-ecology-reviewer       | 环节8  | 新建        | 2   | 法律生态可落地性审查（模块C，可选）     |
+| 1  | paper-writing-orchestrator   | 总入口   | 新建        | 1   | 轻量路由器，环节路由+预设声明+快速通道判断+回溯导航 |
+| 2  | paper-topic-validator        | 环节1  | 新建        | 4   | 五维选题评估+选题验证型文献综述+可选实务溯源模块A       |
+| 3  | paper-idea-architect         | 环节2  | 新建        | 2   | 思路梳理+方法选择路由，产出标准化论证框架文档       |
+| 4  | paper-outline-reviewer       | 环节3  | 新建        | 3   | 八项提纲审查，数据接口对齐          |
+| 5  | paper-literature-coordinator | 环节4  | 新建        | 2   | 四类文献检索协调，产出文献清单+阅读笔记+引注预检   |
+| 6  | paper-writing-engine         | 环节5  | 新建        | 3   | 法学论文写作引擎，六种结构模式+法学论证方法+引注规范 |
+| 7  | paper-argument-evaluator     | 环节6  | 新建        | 2   | 六维/七维论证强度评估，投稿场景适配+可选模块B   |
+| 8  | de-ai-polish                 | 环节7  | 改造自lawbox | 4   | 去AI腔，8大类18条检测规则，含学术自我指涉与标签式概括 |
+| 9  | systems-thinking             | 元认知   | 新建        | 5   | 六维框架元认知工具，含法学应用模式      |
+| 10 | legal-ecology-reviewer       | 环节8  | 新建        | 2   | 法律生态可落地性审查（模块C，可选）     |
+| 11 | paper-final-checklist        | 终稿总检  | 新建        | 1   | 终稿集中复核，7大类32项检查清单     |
 
-**总计**：9个技能，30个文件（含学术伦理声明.md、预设配置说明.md）
+**总计**：11个技能，32个文件（含学术伦理声明.md、预设配置说明.md）
 
 ### 各技能文件清单
 
@@ -92,6 +98,8 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 ├── README.md
 ├── 学术伦理声明.md
 ├── 预设配置说明.md
+├── paper-writing-orchestrator/
+│   └── SKILL.md
 ├── paper-topic-validator/
 │   ├── SKILL.md
 │   └── references/
@@ -134,10 +142,12 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 │       ├── 法学应用模式.md
 │       ├── 诊断报告模板.md
 │       └── 盲区扫描清单.md
-└── legal-ecology-reviewer/
-    ├── SKILL.md
-    └── references/
-        └── 审查清单.md
+├── legal-ecology-reviewer/
+│   ├── SKILL.md
+│   └── references/
+│       └── 审查清单.md
+└── paper-final-checklist/
+    └── SKILL.md
 ```
 
 ---
@@ -172,8 +182,9 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 ### 环节2：思路梳理（paper-idea-architect）
 
 **输入**：环节1的选题诊断报告（通过的选题）  
-**输出**：标准化论证框架文档  
-**核心流程**：核心命题凝练→论证线索梳理→前置论点检验→依据类型标注→反驳预判→章节规划  
+**输出**：标准化论证框架文档（含方法选择）  
+**核心流程**：核心命题凝练→方法选择路由→论证线索梳理→前置论点检验→依据类型标注→反驳预判→章节规划  
+**方法选择路由**：根据核心命题特征，从六种结构模式中推荐最合适的，并匹配主要和辅助论证方法。选择结果写入框架文档，供环节3检查一致性、环节5参考执行  
 **实务轨提示**：需额外标注"实务痛点锚点"——明确论证框架回应的是哪个实务问题。读取并消费"实务问题线索卡"，章节规划中必须有直接对应线索卡痛点的章节  
 **数据接口**：标准化论证框架文档是环节3（提纲审查）的输入  
 **回退条件**：核心命题无法凝练为一句话 → 回退到环节1
@@ -289,13 +300,14 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 
 ```
 环节1输出 → 选题诊断报告 + 选题文献综述报告（环节4的检索起点）+ 实务问题线索卡（实务轨，贯穿环节2-6）
-环节2输出 → 标准化论证框架文档（环节3的输入）
+环节2输出 → 标准化论证框架文档（含方法选择，环节3的输入）
 环节3输出 → 提纲审查报告
 环节4输出 → 标准化文献清单 + 阅读笔记（环节5的输入）
 环节5输出 → 论文初稿（Markdown格式）
 环节6输出 → 论文学证强度评估报告
 环节7输出 → 去AI腔后的终稿
 环节8输出 → 法律生态可落地性审查报告（可选）
+终稿总检输出 → 终稿总检报告（7大类32项核对结果 + 投稿就绪度评分）
 ```
 
 ---
@@ -304,14 +316,15 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 
 ### 完整生产线模式
 
-按环节1→2→3→4→5→6→7的顺序依次执行。每个环节通过后进入下一个，不通过则按回溯协议退回。
+通过总入口 `paper-writing-orchestrator` 进入，按环节1→2→3→4→5→6→7的顺序依次执行。每个环节通过后进入下一个，不通过则按回溯协议退回。环节7（或环节8）通过后，调用 `paper-final-checklist` 做终稿总检。
 
-如选择"决策参考"预设，则在环节7后追加环节8（法律生态审查）。
+如选择"决策参考"预设，则在环节7后追加环节8（法律生态审查），再做终稿总检。
 
 ### 单环节使用
 
 每个技能可独立使用，不依赖完整生产线。例如：
 
+- 想从头开始走生产线→调用paper-writing-orchestrator
 - 只想检查选题→调用paper-topic-validator
 - 只想梳理思路→调用paper-idea-architect
 - 只想审查提纲→调用paper-outline-reviewer
@@ -321,6 +334,7 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 - 只想去AI腔→调用de-ai-polish
 - 想审视方案结构→调用systems-thinking
 - 想审查建议可落地性→调用legal-ecology-reviewer
+- 终稿做最终复核→调用paper-final-checklist
 
 ### 元认知介入
 
@@ -335,7 +349,7 @@ systems-thinking可在任何环节被调用来诊断当前方案/流程/文档�
 
 ## 安装说明
 
-将本文件夹下的9个子文件夹复制到技能目录：
+将本文件夹下的11个子文件夹复制到技能目录：
 
 - 用户级：`~/.workbuddy/skills/`
 - 项目级：`[workspace]/.workbuddy/skills/`
