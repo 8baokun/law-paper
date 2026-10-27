@@ -78,18 +78,18 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 | 序号 | 技能名                          | 环节    | 类型        | 文件数 | 说明                     |
 | -- | ---------------------------- | ----- | --------- | --- | ---------------------- |
 | 1  | paper-writing-orchestrator   | 总入口   | 新建        | 1   | 轻量路由器，环节路由+预设声明+快速通道判断+回溯导航 |
-| 2  | paper-topic-validator        | 环节1  | 新建        | 4   | 五维选题评估+选题验证型文献综述+可选实务溯源模块A       |
+| 2  | paper-topic-validator        | 环节1  | 新建        | 5   | 五维选题评估+选题验证型文献综述+可选实务溯源模块A       |
 | 3  | paper-idea-architect         | 环节2  | 新建        | 2   | 思路梳理+方法选择路由，产出标准化论证框架文档       |
 | 4  | paper-outline-reviewer       | 环节3  | 新建        | 3   | 八项提纲审查，数据接口对齐          |
-| 5  | paper-literature-coordinator | 环节4  | 新建        | 2   | 四类文献检索协调，产出文献清单+阅读笔记+引注预检   |
+| 5  | paper-literature-coordinator | 环节4  | 新建        | 3   | 四类文献检索协调，产出文献清单+阅读笔记+引注预检   |
 | 6  | paper-writing-engine         | 环节5  | 新建        | 3   | 法学论文写作引擎，六种结构模式+法学论证方法+引注规范 |
-| 7  | paper-argument-evaluator     | 环节6  | 新建        | 2   | 六维/七维论证强度评估，投稿场景适配+可选模块B   |
+| 7  | paper-argument-evaluator     | 环节6  | 新建        | 3   | 六维/七维论证强度评估，投稿场景适配+可选模块B，含11种论证故障类型   |
 | 8  | de-ai-polish                 | 环节7  | 改造自lawbox | 4   | 去AI腔，8大类18条检测规则，含学术自我指涉与标签式概括 |
 | 9  | systems-thinking             | 元认知   | 新建        | 5   | 六维框架元认知工具，含法学应用模式      |
 | 10 | legal-ecology-reviewer       | 环节8  | 新建        | 2   | 法律生态可落地性审查（模块C，可选）     |
 | 11 | paper-final-checklist        | 终稿总检  | 新建        | 1   | 终稿集中复核，7大类32项检查清单     |
 
-**总计**：11个技能，32个文件（含学术伦理声明.md、预设配置说明.md）
+**总计**：11个技能，36个文件（含学术伦理声明.md、预设配置说明.md）
 
 ### 各技能文件清单
 
@@ -105,7 +105,8 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 │   └── references/
 │       ├── 选题诊断报告模板.md
 │       ├── 选题文献综述报告模板.md
-│       └── 常见选题问题.md
+│       ├── 常见选题问题.md
+│       └── 检索工具链与策略.md
 ├── paper-idea-architect/
 │   ├── SKILL.md
 │   └── references/
@@ -118,7 +119,8 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 ├── paper-literature-coordinator/
 │   ├── SKILL.md
 │   └── references/
-│       └── 文献覆盖度自检清单.md
+│       ├── 文献覆盖度自检清单.md
+│       └── 输出模板.md
 ├── paper-writing-engine/
 │   ├── SKILL.md
 │   └── references/
@@ -128,7 +130,8 @@ systems-thinking（系统思维）——横跨所有环节的元认知工具
 ├── paper-argument-evaluator/
 │   ├── SKILL.md
 │   └── references/
-│       └── 投稿场景权重详解.md
+│       ├── 投稿场景权重详解.md
+│       └── 评估偏差防范与特殊场景.md
 ├── de-ai-polish/
 │   ├── SKILL.md
 │   └── references/
